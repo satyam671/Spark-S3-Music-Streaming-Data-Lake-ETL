@@ -1,4 +1,7 @@
 # Spark-S3 Music Streaming Data Lake ETL
+
+![31](https://github.com/user-attachments/assets/f15ea565-9f72-465b-ac53-3a49a4bcbeba)
+
 The purpose of this project is to build an ETL pipeline that will be able to extract song and log data from an S3 bucket, process the data using Spark and load the data back into s3 as a set of dimensional tables in Spark parquet files. This helps analysts to continue finding insights on what their users are listening to.
 
 ## Database Schema Design
@@ -6,6 +9,10 @@ The tables created include one fact table, `songplays` and four dimensional tabl
 
 ## ETL Pipeline
 The data that gets extracted will need to be transformed to fit the data model in the target destination tables. For instance, the source data for timestamp is in unix format and that will need to be converted to timestamp from which the year, month, day, hour values etc can be extracted which will fit in the relevant target time and songplays table columns. The script will also need to cater for duplicates, ensuring that they aren't part of the final data that is loaded in the tables.
+
+## Architecture
+
+![diagram-export-24-8-2024-10_28_40-pm](https://github.com/user-attachments/assets/62b80fb8-fddf-4e39-a844-ba1aec78bfc0)
 
 ## Datasets used
 The datasets used are retrieved from the s3 bucket and are in JSON format. There are two datasets namely `log_data` and `song_data`. The `song_data` dataset is a subset of the [Million Song Dataset](http://millionsongdataset.com/) while the `log_data` contains generated log files based on the songs in `song_data`.
