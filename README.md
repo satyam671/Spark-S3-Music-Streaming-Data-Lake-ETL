@@ -1,6 +1,6 @@
 # Spark-S3 Music Streaming Data Lake ETL
 
-![31](https://github.com/user-attachments/assets/f15ea565-9f72-465b-ac53-3a49a4bcbeba)
+![lake1](https://github.com/user-attachments/assets/ef1f122d-e2c8-4e9a-b338-c4bc09f17610)
 
 The purpose of this project is to build an ETL pipeline that will be able to extract song and log data from an S3 bucket, process the data using Spark and load the data back into s3 as a set of dimensional tables in Spark parquet files. This helps analysts to continue finding insights on what their users are listening to.
 
